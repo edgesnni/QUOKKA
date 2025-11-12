@@ -25,17 +25,25 @@ server/ :Contains scripts and logic to be run on the Server (Rank 0) machine.
 client/ : Contains scripts and logic to be run on the Client (Rank 1) machine.
 
 For each, the QUOKKA options are in folders:
+
 -plaintext
+
 -secure_option_CLIENTDETERMINED
+
 -secure_option_SERVERDETERMINED
--secure_option_NEUTRAL.
+
+-secure_option_NEUTRAL
 
 and the helper files are all the remaining .py files.
 
 In each option folder,
+
 -models are defined in eenet.py or secure_eenet.py
+
 -trained model file and other arguments are ingested in init.py or secure_init.py
+
 -secure_main.py or main.py execute the inference
+
 -secure_resnet.py or resnet.py contain the original exit-free model architecture (not used)
 
 
@@ -70,12 +78,19 @@ pip install -r requirements.txt
 The system requires your datasets (or the test set) to be organized in a specific structure, inherited from the original EENets project. Datasets are expected to be in the directory /data/ relative to the QUOKKA root directory. Note that QUOKKA was only tested on CIFAR10 and Tiny Imagenet trained models.
 
 +/data
+
     -/cifar10
+
     -/imagenet
+
     -/mnist
+
     -/svhn
+
     +/tiny-imagenet
+
        - /train
+
        - /val    
 
 
@@ -88,13 +103,16 @@ Before running the run.sh script on both machines, you MUST configure the follow
 ## In common.sh: 
 
 MASTER_ADDR # For both server and client machines, write server's IP
+
 MASTER_PORT
+
 GLOO_SOCKET_IFNAME
 
 
 ## In throttle.sh:
 
 DEV  # Same as GLOO_SOCKET_IFNAME in common.sh
+
 For the client, insert server's ip in iperf3 -c
 
 # Usage
