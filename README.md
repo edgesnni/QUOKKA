@@ -26,28 +26,28 @@ client/ : Contains scripts and logic to be run on the Client (Rank 1) machine.
 
 For each, the QUOKKA options are in folders:
 
-+/client/server
+    +/client/server
 
-    -/plaintext
+        -/plaintext
 
-    -/secure_option_CLIENTDETERMINED
+        -/secure_option_CLIENTDETERMINED
 
-    -/secure_option_SERVERDETERMINED
+        -/secure_option_SERVERDETERMINED
 
-    -/secure_option_NEUTRAL
+        -/secure_option_NEUTRAL
 
 
 and the helper files are all the remaining .py files.
 
 In each option folder,
 
--/models are defined in eenet.py or secure_eenet.py
+    -/models are defined in eenet.py or secure_eenet.py
 
--/trained model file and other arguments are ingested in init.py or secure_init.py
+    -/trained model file and other arguments are ingested in init.py or secure_init.py
 
--/secure_main.py or main.py execute the inference
+    -/secure_main.py or main.py execute the inference
 
--/secure_resnet.py or resnet.py contain the original exit-free model architecture (not used)
+    -/secure_resnet.py or resnet.py contain the original exit-free model architecture (not used)
 
 
 # Installation
@@ -80,21 +80,21 @@ pip install -r requirements.txt
 
 The system requires your datasets (or the test set) to be organized in a specific structure, inherited from the original EENets project. Datasets are expected to be in the directory /data/ relative to the QUOKKA root directory. Note that QUOKKA was only tested on CIFAR10 and Tiny Imagenet trained models.
 
-+/data
+    +/data
 
-    -/cifar10
+        -/cifar10
 
-    -/imagenet
+        -/imagenet
 
-    -/mnist
+        -/mnist
 
-    -/svhn
+        -/svhn
 
-    +/tiny-imagenet
+        +/tiny-imagenet
 
-       - /train
+            - /train
 
-       - /val    
+            - /val    
 
 
 # Configuration (Crucial for Secure Mode)
