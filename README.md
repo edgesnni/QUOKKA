@@ -26,25 +26,28 @@ client/ : Contains scripts and logic to be run on the Client (Rank 1) machine.
 
 For each, the QUOKKA options are in folders:
 
--plaintext
++/client/server
 
--secure_option_CLIENTDETERMINED
+    -/plaintext
 
--secure_option_SERVERDETERMINED
+    -/secure_option_CLIENTDETERMINED
 
--secure_option_NEUTRAL
+    -/secure_option_SERVERDETERMINED
+
+    -/secure_option_NEUTRAL
+
 
 and the helper files are all the remaining .py files.
 
 In each option folder,
 
--models are defined in eenet.py or secure_eenet.py
+-/models are defined in eenet.py or secure_eenet.py
 
--trained model file and other arguments are ingested in init.py or secure_init.py
+-/trained model file and other arguments are ingested in init.py or secure_init.py
 
--secure_main.py or main.py execute the inference
+-/secure_main.py or main.py execute the inference
 
--secure_resnet.py or resnet.py contain the original exit-free model architecture (not used)
+-/secure_resnet.py or resnet.py contain the original exit-free model architecture (not used)
 
 
 # Installation
