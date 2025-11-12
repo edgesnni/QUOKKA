@@ -105,18 +105,18 @@ Before running the run.sh script on both machines, you MUST configure the follow
 
 ## In common.sh: 
 
-MASTER_ADDR # For both server and client machines, write server's IP
+    MASTER_ADDR # For both server and client machines, write server's IP
 
-MASTER_PORT
+    MASTER_PORT
 
-GLOO_SOCKET_IFNAME
+    GLOO_SOCKET_IFNAME
 
 
 ## In throttle.sh:
 
-DEV  # Same as GLOO_SOCKET_IFNAME in common.sh
+    DEV  # Same as GLOO_SOCKET_IFNAME in common.sh
 
-For the client, insert server's ip in iperf3 -c
+    For the client, insert server's ip in iperf3 -c
 
 # Usage
 
@@ -134,8 +134,7 @@ Inference is initiated using the main run.sh script, which handles the distribut
 
 This mode performs standard, unsecured early-exit inference. 
 ### To start the plaintext inference on the server:
-
-./run.sh
+    ./run.sh
 
 
 ## 2. Secure (SNNI) Inference (Required arguments)
@@ -152,13 +151,13 @@ c. Neutral (Neither party obtains the confidence score)
 Example Execution (on both Server and Client):
 
 ### To start the Server-Determined secure inference:
-./run.sh S
+    ./run.sh S
 
 ### To start the Neutral secure inference:
-./run.sh N
+    ./run.sh N
 
 ### To start the Client-Determined secure inference:
-./run.sh C
+    ./run.sh C
 
 
 # 📜 License and Acknowledgements
