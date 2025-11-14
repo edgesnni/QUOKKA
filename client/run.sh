@@ -2,7 +2,7 @@
 
 ARG=$(echo "$1" | tr '[:lower:]' '[:upper:]' | tr -d '\n')
 
-MODEL="" # 'eenet18' 'eenet34' 'eenet50' 'eenet101' 'eenet152' 'eenet20' 'eenet32' 'eenet44' 'eenet56' 'eenet110'; do
+MODEL="" # 'eenet18' 'eenet34' 'eenet50' 'eenet101' 'eenet152' 'eenet20' 'eenet32' 'eenet44' 'eenet56' 'eenet110'
 DATASET="" #cifar10, tiny-imagenet
 NUM_EXITS=
 TYPE_EXITS="" #bnpool, pool, plain 
