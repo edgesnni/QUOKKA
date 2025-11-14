@@ -75,7 +75,7 @@ cd QUOKKA
 
 ## Install Python dependencies:
 
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 
 
 # Data Setup
@@ -183,6 +183,7 @@ Edanur Demir - EENets: Early Exit Convolutional Neural Networks
 ## Authors
 
 * **Daphnee Chabal** - *QUOKKA: Fast Faster Secure Neural Network Inference with Early-Exit Technology*
+
 
 
 
