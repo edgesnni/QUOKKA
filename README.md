@@ -120,16 +120,22 @@ Before running the run.sh script on both machines, you MUST configure the follow
 
     For the client, insert server's ip in iperf3 -c
 
+## In run.sh
+
+    MODEL="" # 'eenet18' 'eenet34' 'eenet50' 'eenet101' 'eenet152' 'eenet20' 'eenet32' 'eenet44' 'eenet56' 'eenet110'
+    
+    DATASET="" # 'cifar10' 'tiny-imagenet'
+    
+    NUM_EXIT= # Integer from 2
+    TYPE_EXITS="" # 'bnpool', 'pool', 'plain'
+    EXIT_THRESHOLD= # Number from 0.0 to 1.0
+    DISTR_EXITS="" # 'gold_ratio' 'pareto' 'fine' 'linear'
+    BATCH= # Integer from 1
+    TRAINED_MODEL=".pth" # Name of file in same repository containing trained model
+    
 # Usage
 
-Inference is initiated using the main run.sh script, which handles the distributed setup and calls the necessary Python files. run.sh needs to be manually modified to determine
--the name of the .pth file where the trained model is stored
--the dataset to use for inference
--the model contained in the .pth file
--the desired number of exits (must be same as what was trained on)
--the exit type (must be same as what was trained on)
--the method of distribution of exits (must be same as what was trained on)
--the confidence threshold
+Inference is initiated using the main run.sh script, which handles the distributed setup and calls the necessary Python files. run.sh needs to be manually modified, along with throttle.sh and common.sh
 
 
 ## 1. Plaintext Inference (No arguments)
@@ -177,6 +183,7 @@ Edanur Demir - EENets: Early Exit Convolutional Neural Networks
 ## Authors
 
 * **Daphnee Chabal** - *QUOKKA: Fast Faster Secure Neural Network Inference with Early-Exit Technology*
+
 
 
 
