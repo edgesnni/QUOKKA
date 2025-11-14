@@ -8,6 +8,8 @@ This repository supports both plaintext and secure (SMPC) inference.
 
 This work is detailed in the paper: QUOKKA: Fast Faster Secure Neural Network Inference with Early-Exit Technology, accepted to the 18th International Symposium on Foundations & Practice of Security (FPS - 2025).
 
+![alt text](options.png)
+
 # Architectural Overview
 
 QUOKKA is a two-party system designed to run on separate machines, where one acts as the Server (Rank 0) and the other as the Client (Rank 1).
@@ -175,3 +177,4 @@ Edanur Demir - EENets: Early Exit Convolutional Neural Networks
 ## Authors
 
 * **Daphnee Chabal** - *QUOKKA: Fast Faster Secure Neural Network Inference with Early-Exit Technology*
+
